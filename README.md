@@ -278,4 +278,3 @@ Zamień `<full_path_to_test>` na rzeczywistą ścieżkę do pliku z testami.
 ## Pomoc
 
 W przypadku problemów z konfiguracją lub uruchomieniem aplikacji Your Health Time prosimy o kontakt: [mszymczak710@o2.pl](mailto:mszymczak710@o2.pl)
-```

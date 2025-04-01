@@ -1,0 +1,33 @@
+@import 'utils';
+
+.form-list-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form-list-table {
+  width: 100%;
+  table-layout: fixed;
+
+  th,
+  td {
+    &:last-child {
+      width: rem(50px);
+      vertical-align: top;
+    }
+  }
+}
+
+::ng-deep {
+  .form-list-table {
+    .wvw-field {
+      .mat-mdc-form-field.mat-form-field-appearance-outline.readonly {
+        .mdc-text-field--outlined .mdc-notched-outline {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

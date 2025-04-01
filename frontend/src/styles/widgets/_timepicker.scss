@@ -1,0 +1,72 @@
+@use '@angular/material' as mat;
+@use '../../../node_modules/@dhutaryan/ngx-mat-timepicker' as mat-timepicker;
+
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$blue-palette);
+$warn: mat.define-palette(mat.$red-palette);
+
+$ngx-mat-timepicker-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn
+    )
+  )
+);
+@include mat-timepicker.timepicker-theme($ngx-mat-timepicker-theme);
+
+$btn-icon-size: rem(32px);
+$icon-size: rem(24px);
+
+.mat-mdc-form-field-hint-wrapper,
+.mat-timepicker-content-layout-title {
+  visibility: hidden;
+}
+
+.mat-time-inputs-field {
+  .mat-mdc-text-field-wrapper {
+    background-color: #eee;
+  }
+}
+
+.mat-clock-dial-value {
+  background-color: #eee;
+
+  &.mat-clock-dial-value-active {
+    background-color: #ddd;
+    color: #3f51b5;
+  }
+}
+
+.mat-clock-dial {
+  background-color: #eee;
+
+  &:before {
+    background-color: #3f51b5;
+  }
+
+  &.mat-clock-dial-minutes,
+  &.mat-clock-dial-hours {
+    .mat-clock-dial-cell {
+      &:focus,
+      &:hover {
+        background-color: #3f51b5 !important;
+        color: $white;
+      }
+    }
+  }
+}
+
+.mat-timepicker-content-actions {
+  align-items: center;
+
+  @include mat-icon-button-size($btn-icon-size) {
+    margin-left: 0;
+  }
+
+  @include element-size('.mat-mdc-icon-button.mat-mdc-button-base svg', $icon-size) {
+    vertical-align: middle;
+    margin-bottom: rem(4px);
+  }
+}

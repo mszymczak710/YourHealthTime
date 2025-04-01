@@ -1,0 +1,5 @@
+.git
+.gitignore
+.vscode
+__pycache__/
+backend/.venv

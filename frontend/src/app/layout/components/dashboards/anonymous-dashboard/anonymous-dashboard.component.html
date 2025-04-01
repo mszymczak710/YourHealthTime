@@ -1,0 +1,52 @@
+<mat-card class="d-flex align-items-center">
+  <h1 class="mb-4">{{ strings.dashboard.unauthorized.title }}</h1>
+
+  <img class="brand-logo mb-4" src="assets/logo-2.png" alt="logo" />
+
+  <p class="fs-5 mb-4">
+    @for (line of strings.dashboard.unauthorized.paragraph; track line; let last = $last) {
+      <span [innerHTML]="line"></span>
+      @if (!last) {
+        <br />
+      }
+    }
+  </p>
+
+  <div class="d-flex gap-3 justify-content-center mb-4">
+    <button mat-flat-button color="primary" (click)="openLoginForm()">
+      {{ strings.dashboard.unauthorized.actions.login }}
+    </button>
+    <button mat-flat-button color="accent" (click)="openRegisterForm()">
+      {{ strings.dashboard.unauthorized.actions.register }}
+    </button>
+  </div>
+
+  <div class="row w-100 justify-content-center text-muted mt-4">
+    <div class="col-4 d-flex flex-column align-items-center">
+      <mat-icon color="primary" class="mb-2" svgIcon="account-circle"></mat-icon>
+      <div class="text-center">
+        <strong>{{ strings.dashboard.unauthorized.features.account.title }}</strong>
+        <br />
+        {{ strings.dashboard.unauthorized.features.account.description }}
+      </div>
+    </div>
+
+    <div class="col-4 d-flex flex-column align-items-center">
+      <mat-icon color="primary" class="mb-2" svgIcon="stethoscope"></mat-icon>
+      <div class="text-center">
+        <strong>{{ strings.dashboard.unauthorized.features.visits.title }}</strong>
+        <br />
+        {{ strings.dashboard.unauthorized.features.visits.description }}
+      </div>
+    </div>
+
+    <div class="col-4 d-flex flex-column align-items-center">
+      <mat-icon color="primary" class="mb-2" svgIcon="pill-multiple"></mat-icon>
+      <div class="text-center">
+        <strong>{{ strings.dashboard.unauthorized.features.prescriptions.title }}</strong>
+        <br />
+        {{ strings.dashboard.unauthorized.features.prescriptions.description }}
+      </div>
+    </div>
+  </div>
+</mat-card>

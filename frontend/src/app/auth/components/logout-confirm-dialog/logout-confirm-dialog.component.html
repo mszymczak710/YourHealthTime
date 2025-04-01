@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{ strings.logout.title }}</h2>
+
+<mat-dialog-content>
+  @if (errorMessage) {
+    <span class="alert alert-danger d-block mb-3">{{ errorMessage }}</span>
+  }
+  <span>{{ strings.logout.confirm.content }}</span>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button color="primary" mat-button mat-dialog-close>{{ commonStrings.cancel }}</button>
+  <button cdkFocusInitial mat-flat-button color="accent" type="submit" (click)="logout()">
+    {{ strings.logout.confirm.button }}
+  </button>
+</mat-dialog-actions>

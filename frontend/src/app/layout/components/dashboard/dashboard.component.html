@@ -1,0 +1,7 @@
+<div class="d-flex flex-column align-items-center justify-content-center">
+  <wvw-admin-dashboard *wvwPermission="[userRole.ADMIN]" [user]="user"></wvw-admin-dashboard>
+  <wvw-anonymous-dashboard *wvwPermission="[]"></wvw-anonymous-dashboard>
+  <wvw-doctor-dashboard *wvwPermission="[userRole.DOCTOR]" [user]="user"></wvw-doctor-dashboard>
+  <wvw-nurse-dashboard *wvwPermission="[userRole.NURSE]" [user]="user"></wvw-nurse-dashboard>
+  <wvw-patient-dashboard *wvwPermission="[userRole.PATIENT]" [user]="user"></wvw-patient-dashboard>
+</div>

@@ -1,0 +1,8 @@
+@if (specializations) {
+  <p class="h6 ps-3">{{ strings.doctor.specializations.label }}</p>
+  <ul class="mb-0">
+    @for (specialization of specializations; track specialization) {
+      <li>{{ specialization.name }}</li>
+    }
+  </ul>
+}

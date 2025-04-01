@@ -1,0 +1,1156 @@
+[
+  {
+    "name": "Ibuprofen",
+    "type_of_medicine": "Lek przeciwzapalny niesteroidowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Ibuprofen",
+        "quantity": 200,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Paracetamol",
+    "type_of_medicine": "Lek przeciwbólowy i przeciwgorączkowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Paracetamol",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Aspiryna",
+    "type_of_medicine": "Lek przeciwbólowy, przeciwgorączkowy, przeciwzapalny",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Kwas acetylosalicylowy",
+        "quantity": 300,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Amoksycylina",
+    "type_of_medicine": "Antybiotyk",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Amoksycylina",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Cetirizyna",
+    "type_of_medicine": "Lek przeciwhistaminowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Cetirizyna",
+        "quantity": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Metformina",
+    "type_of_medicine": "Lek przeciwcukrzycowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Metformina",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Lizyna",
+    "type_of_medicine": "Suplement diety",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Lizyna",
+        "quantity": 1000,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Loratadyna",
+    "type_of_medicine": "Lek przeciwhistaminowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Loratadyna",
+        "quantity": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Simwastatyna",
+    "type_of_medicine": "Lek hipolipemizujący",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Simwastatyna",
+        "quantity": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Amlodypina",
+    "type_of_medicine": "Lek przeciwnadciśnieniowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Amlodypina",
+        "quantity": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Ibuprofen Kids",
+    "type_of_medicine": "Lek przeciwzapalny niesteroidowy",
+    "form": "Syrop",
+    "active_ingredients": [
+      {
+        "name": "Ibuprofen",
+        "quantity": 100,
+        "unit": "mg/ml"
+      }
+    ]
+  },
+  {
+    "name": "Diphenhydramine",
+    "type_of_medicine": "Lek przeciwhistaminowy",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Diphenhydramine",
+        "quantity": 25,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Omeprazole",
+    "type_of_medicine": "Inhibitor pompy protonowej",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Omeprazole",
+        "quantity": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Lisinopril",
+    "type_of_medicine": "Lek przeciwnadciśnieniowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Lisinopril",
+        "quantity": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Azithromycin",
+    "type_of_medicine": "Antybiotyk",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Azithromycin",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Fluoxetine",
+    "type_of_medicine": "Antydepresant SSRI",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Fluoxetine",
+        "quantity": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "APAP",
+    "type_of_medicine": "Lek przeciwbólowy i przeciwgorączkowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Paracetamol",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Nospa",
+    "type_of_medicine": "Lek rozkurczowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Drotaweryna",
+        "quantity": 40,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "L-Karnityna",
+    "type_of_medicine": "Suplement diety",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "L-Karnityna",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Loperamid",
+    "type_of_medicine": "Lek przeciwbiegunkowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Loperamid",
+        "quantity": 2,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Plavix",
+    "type_of_medicine": "Lek przeciwzakrzepowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Klopidogrel",
+        "quantity": 75,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Euthyrox",
+    "type_of_medicine": "Lek na niedoczynność tarczycy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Lewotyroksyna sodowa",
+        "quantity": 100,
+        "unit": "mcg"
+      }
+    ]
+  },
+  {
+    "name": "Bisocard",
+    "type_of_medicine": "Beta-bloker",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Bisoprolol",
+        "quantity": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Rutinoscorbin",
+    "type_of_medicine": "Suplement diety",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Rutozyd",
+        "quantity": 25,
+        "unit": "mg"
+      },
+      {
+        "name": "Kwas askorbinowy (witamina C)",
+        "quantity": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Magne B6",
+    "type_of_medicine": "Suplement diety",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Magnez",
+        "quantity": 48,
+        "unit": "mg"
+      },
+      {
+        "name": "Witamina B6",
+        "quantity": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Apetizer",
+    "type_of_medicine": "Suplement diety",
+    "form": "Syrop",
+    "active_ingredients": [
+      {
+        "name": "Wyciąg z korzenia goryczki",
+        "quantity": 0.2,
+        "unit": "ml"
+      },
+      {
+        "name": "Wyciąg z owoców kopru włoskiego",
+        "quantity": 0.2,
+        "unit": "ml"
+      },
+      {
+        "name": "Wyciąg z owoców kozłka lekarskiego",
+        "quantity": 0.2,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "name": "Ascorvita",
+    "type_of_medicine": "Suplement diety",
+    "form": "Tabletka musująca",
+    "active_ingredients": [
+      {
+        "name": "Kwas askorbinowy (witamina C)",
+        "quantity": 1000,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Atrox",
+    "type_of_medicine": "Lek przeciwbólowy",
+    "form": "Maść",
+    "active_ingredients": [
+      {
+        "name": "Wyciąg z jadu żmii",
+        "quantity": 5,
+        "unit": "mg/g"
+      }
+    ]
+  },
+  {
+    "name": "Altacet",
+    "type_of_medicine": "Lek przeciwobrzękowy, przeciwzapalny",
+    "form": "Żel",
+    "active_ingredients": [
+      {
+        "name": "Acetanilid",
+        "quantity": 8,
+        "unit": "mg/g"
+      }
+    ]
+  },
+  {
+    "name": "Furosemid",
+    "type_of_medicine": "Diuretyk pętlowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Furosemid",
+        "quantity": 40,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Diuver",
+    "type_of_medicine": "Diuretyk pętlowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Torasemid",
+        "quantity": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Alprazolam",
+    "type_of_medicine": "Benzodiazepina",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Alprazolam",
+        "quantity": 1,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Prednizon",
+    "type_of_medicine": "Kortykosteroid",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Prednizon",
+        "quantity": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Levofloksacyna",
+    "type_of_medicine": "Antybiotyk fluorochinolonowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Levofloksacyna",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Vicodin",
+    "type_of_medicine": "Lek przeciwbólowy opioidowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Hydrokodon",
+        "quantity": 5,
+        "unit": "mg"
+      },
+      {
+        "name": "Paracetamol",
+        "quantity": 300,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Phentermine",
+    "type_of_medicine": "Lek na odchudzanie",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Phentermine",
+        "quantity": 37.5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Leflunomide",
+    "type_of_medicine": "Lek przeciwreumatyczny",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Leflunomide",
+        "quantity": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Zyprexa",
+    "type_of_medicine": "Antypsychotyk",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Olanzapine",
+        "quantity": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Spironolactone",
+    "type_of_medicine": "Diuretyk",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Spironolactone",
+        "quantity": 25,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Niaspan",
+    "type_of_medicine": "Lek obniżający poziom cholesterolu",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Kwas nikotynowy (Niacyna)",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Żelazo",
+    "type_of_medicine": "Suplement diety",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Żelazo",
+        "quantity": 18,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Doxycycline",
+    "type_of_medicine": "Antybiotyk",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Doxycycline",
+        "quantity": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Ventolin",
+    "type_of_medicine": "Lek rozszerzający oskrzela",
+    "form": "Inhalator",
+    "active_ingredients": [
+      {
+        "name": "Salbutamol",
+        "quantity": 100,
+        "unit": "mcg/dawkę"
+      }
+    ]
+  },
+  {
+    "name": "Tramadol",
+    "type_of_medicine": "Lek przeciwbólowy opioidowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Tramadol",
+        "quantity": 50,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Lokomotiv",
+    "type_of_medicine": "Lek przeciwkaszlowy",
+    "form": "Syrop",
+    "active_ingredients": [
+      {
+        "name": "Ambroksol",
+        "quantity": 15,
+        "unit": "mg/5ml"
+      }
+    ]
+  },
+  {
+    "name": "Lorazepam",
+    "type_of_medicine": "Benzodiazepina",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Lorazepam",
+        "quantity": 1,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Amoxicillin",
+    "type_of_medicine": "Antybiotyk",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Amoksycylina",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Lipitor",
+    "type_of_medicine": "Statyna, lek obniżający poziom cholesterolu",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Atorwastatyna",
+        "quantity": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Synthroid",
+    "type_of_medicine": "Lek na niedoczynność tarczycy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Lewotyroksyna",
+        "quantity": 100,
+        "unit": "mcg"
+      }
+    ]
+  },
+  {
+    "name": "Lexapro",
+    "type_of_medicine": "Antydepresant SSRI",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Escitalopram",
+        "quantity": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Plaquenil",
+    "type_of_medicine": "Lek przeciwmalaryczny",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Hydroksychlorochina",
+        "quantity": 200,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Coumadin",
+    "type_of_medicine": "Antykoagulant",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Wafaryna",
+        "quantity": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Celebrex",
+    "type_of_medicine": "Niesteroidowy lek przeciwzapalny",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Celekoksyb",
+        "quantity": 200,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Glucophage",
+    "type_of_medicine": "Lek przeciwcukrzycowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Metformina",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Liprimar",
+    "type_of_medicine": "Statyna, lek obniżający poziom cholesterolu",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Atorwastatyna",
+        "quantity": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Norvasc",
+    "type_of_medicine": "Lek przeciwnadciśnieniowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Amlodypina",
+        "quantity": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Crestor",
+    "type_of_medicine": "Statyna, lek obniżający poziom cholesterolu",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Rozuwastatyna",
+        "quantity": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Valium",
+    "type_of_medicine": "Benzodiazepina",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Diazepam",
+        "quantity": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Nexium",
+    "type_of_medicine": "Inhibitor pompy protonowej",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Esomeprazol",
+        "quantity": 40,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Prozac",
+    "type_of_medicine": "Antydepresant SSRI",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Fluoksetyna",
+        "quantity": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Pradaxa",
+    "type_of_medicine": "Antykoagulant",
+    "form": "Kapsułka",
+    "active_ingredients": [
+      {
+        "name": "Dabigatran",
+        "quantity": 150,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Maść hydrokortyzonowa",
+    "type_of_medicine": "Kortykosteroid",
+    "form": "Maść",
+    "active_ingredients": [
+      {
+        "name": "Hydrokortyzon",
+        "quantity": 1,
+        "unit": "%"
+      }
+    ]
+  },
+  {
+    "name": "Voltaren",
+    "type_of_medicine": "Niesteroidowy lek przeciwzapalny",
+    "form": "Żel",
+    "active_ingredients": [
+      {
+        "name": "Diklofenak",
+        "quantity": 1,
+        "unit": "%"
+      }
+    ]
+  },
+  {
+    "name": "Ambroxol",
+    "type_of_medicine": "Lek wykrztuśny",
+    "form": "Syrop",
+    "active_ingredients": [
+      {
+        "name": "Ambroksol",
+        "quantity": 15,
+        "unit": "mg/5ml"
+      }
+    ]
+  },
+  {
+    "name": "Bepanthen",
+    "type_of_medicine": "Lek na skórę",
+    "form": "Maść",
+    "active_ingredients": [
+      {
+        "name": "Dekspantenol",
+        "quantity": 5,
+        "unit": "%"
+      }
+    ]
+  },
+  {
+    "name": "Ibuprofen Żel",
+    "type_of_medicine": "Niesteroidowy lek przeciwzapalny",
+    "form": "Żel",
+    "active_ingredients": [
+      {
+        "name": "Ibuprofen",
+        "quantity": 5,
+        "unit": "%"
+      }
+    ]
+  },
+  {
+    "name": "Acyclovir Maść",
+    "type_of_medicine": "Lek przeciwwirusowy",
+    "form": "Maść",
+    "active_ingredients": [
+      {
+        "name": "Acyclovir",
+        "quantity": 5,
+        "unit": "%"
+      }
+    ]
+  },
+  {
+    "name": "Benadryl",
+    "type_of_medicine": "Lek przeciwhistaminowy",
+    "form": "Syrop",
+    "active_ingredients": [
+      {
+        "name": "Difenyhydramina",
+        "quantity": 14,
+        "unit": "mg/ml"
+      }
+    ]
+  },
+  {
+    "name": "Heparin Żel",
+    "type_of_medicine": "Antykoagulant",
+    "form": "Żel",
+    "active_ingredients": [
+      {
+        "name": "Heparyna",
+        "quantity": 1000,
+        "unit": "IU/g"
+      }
+    ]
+  },
+  {
+    "name": "Calamine Lotion",
+    "type_of_medicine": "Lek na skórę",
+    "form": "Lotion",
+    "active_ingredients": [
+      {
+        "name": "Kalamin",
+        "quantity": 8,
+        "unit": "%"
+      },
+      {
+        "name": "Oksyd cynku",
+        "quantity": 8,
+        "unit": "%"
+      }
+    ]
+  },
+  {
+    "name": "Prospan",
+    "type_of_medicine": "Lek wykrztuśny",
+    "form": "Syrop",
+    "active_ingredients": [
+      {
+        "name": "Wyciąg z liści bluszczu",
+        "quantity": 35,
+        "unit": "mg/ml"
+      }
+    ]
+  },
+  {
+    "name": "Rennie",
+    "type_of_medicine": "Lek zobojętniający kwas żołądkowy",
+    "form": "Tabletka do żucia",
+    "active_ingredients": [
+      {
+        "name": "Węglan wapnia",
+        "quantity": 680,
+        "unit": "mg"
+      },
+      {
+        "name": "Węglan magnezu",
+        "quantity": 80,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Artelac",
+    "type_of_medicine": "Lek nawilżający oczy",
+    "form": "Krople do oczu",
+    "active_ingredients": [
+      {
+        "name": "Hypromeloza",
+        "quantity": 3.2,
+        "unit": "mg/ml"
+      }
+    ]
+  },
+  {
+    "name": "Maalox",
+    "type_of_medicine": "Lek zobojętniający kwas żołądkowy",
+    "form": "Suspensja",
+    "active_ingredients": [
+      {
+        "name": "Wodorotlenek glinu",
+        "quantity": 400,
+        "unit": "mg/5ml"
+      },
+      {
+        "name": "Wodorotlenek magnezu",
+        "quantity": 400,
+        "unit": "mg/5ml"
+      }
+    ]
+  },
+  {
+    "name": "Gaviscon",
+    "type_of_medicine": "Lek na zgagę i refluks",
+    "form": "Liquid",
+    "active_ingredients": [
+      {
+        "name": "Algynian sodu",
+        "quantity": 500,
+        "unit": "mg/10ml"
+      },
+      {
+        "name": "Wodorowęglan sodu",
+        "quantity": 267,
+        "unit": "mg/10ml"
+      }
+    ]
+  },
+  {
+    "name": "Visine",
+    "type_of_medicine": "Krople do oczu",
+    "form": "Krople do oczu",
+    "active_ingredients": [
+      {
+        "name": "Tetryzolina",
+        "quantity": 0.5,
+        "unit": "mg/ml"
+      }
+    ]
+  },
+  {
+    "name": "Seretide",
+    "type_of_medicine": "Lek przeciwastmatyczny",
+    "form": "Inhalator",
+    "active_ingredients": [
+      {
+        "name": "Flutykazon",
+        "quantity": 125,
+        "unit": "mcg"
+      },
+      {
+        "name": "Salmeterol",
+        "quantity": 25,
+        "unit": "mcg"
+      }
+    ]
+  },
+  {
+    "name": "Spiriva",
+    "type_of_medicine": "Bronchodylatator",
+    "form": "Inhalator",
+    "active_ingredients": [
+      {
+        "name": "Tiotropium",
+        "quantity": 18,
+        "unit": "mcg"
+      }
+    ]
+  },
+  {
+    "name": "Asmanex",
+    "type_of_medicine": "Kortykosteroid wziewny",
+    "form": "Inhalator",
+    "active_ingredients": [
+      {
+        "name": "Mometazon",
+        "quantity": 200,
+        "unit": "mcg"
+      }
+    ]
+  },
+  {
+    "name": "Ranitidyna",
+    "type_of_medicine": "Antagonista receptora H2",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Ranitidyna",
+        "quantity": 150,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Losartan",
+    "type_of_medicine": "Antagonista receptora angiotensyny II",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Losartan",
+        "quantity": 50,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Digoksyna",
+    "type_of_medicine": "Glikozyd nasercowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Digoksyna",
+        "quantity": 0.125,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Flonase",
+    "type_of_medicine": "Kortykosteroid wziewny",
+    "form": "Inhalator",
+    "active_ingredients": [
+      {
+        "name": "Flutykazon",
+        "quantity": 50,
+        "unit": "mcg"
+      }
+    ]
+  },
+  {
+    "name": "Azytromycyna",
+    "type_of_medicine": "Antybiotyk makrolidowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Azytromycyna",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Pantoprazol",
+    "type_of_medicine": "Inhibitor pompy protonowej",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Pantoprazol",
+        "quantity": 40,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Warfaryna",
+    "type_of_medicine": "Antykoagulant",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Warfaryna",
+        "quantity": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Ciprofloksacyna",
+    "type_of_medicine": "Antybiotyk fluorochinolonowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Ciprofloksacyna",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Kaptopryl",
+    "type_of_medicine": "Inhibitor ACE",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Kaptopryl",
+        "quantity": 25,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Clarithromycin",
+    "type_of_medicine": "Antybiotyk makrolidowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Clarithromycin",
+        "quantity": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Meloksykam",
+    "type_of_medicine": "Niesteroidowy lek przeciwzapalny",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Meloksykam",
+        "quantity": 15,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Hydrochlorotiazyd",
+    "type_of_medicine": "Diuretyk tiazydowy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Hydrochlorotiazyd",
+        "quantity": 25,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "name": "Levothyroxine",
+    "type_of_medicine": "Lek na niedoczynność tarczycy",
+    "form": "Tabletka",
+    "active_ingredients": [
+      {
+        "name": "Levothyroxine",
+        "quantity": 100,
+        "unit": "mcg"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+@switch (column.type) {
+  @case (columnTypes.BOOLEAN) {
+    <wvw-boolean-cell [column]="column" [row]="row"></wvw-boolean-cell>
+  }
+  @case (columnTypes.DATE) {
+    <wvw-date-cell [column]="column" [row]="row"></wvw-date-cell>
+  }
+  @case (columnTypes.DATETIME) {
+    <wvw-datetime-cell [column]="column" [row]="row"></wvw-datetime-cell>
+  }
+  @case (columnTypes.NUMBER) {
+    <wvw-number-cell [column]="column" [row]="row"></wvw-number-cell>
+  }
+  @case (columnTypes.SELECT) {
+    <wvw-select-cell [column]="column" [row]="row"></wvw-select-cell>
+  }
+  @default {
+    <wvw-text-cell [column]="column" [row]="row"></wvw-text-cell>
+  }
+}

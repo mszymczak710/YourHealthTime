@@ -1,0 +1,38 @@
+@switch (field.type) {
+  @case (formFieldTypes.AUTOCOMPLETE) {
+    <wvw-autocomplete-field [control]="control" [field]="field"></wvw-autocomplete-field>
+  }
+  @case (formFieldTypes.BOOLEAN) {
+    <wvw-radio-boolean-field [control]="control" [field]="field"></wvw-radio-boolean-field>
+  }
+  @case (formFieldTypes.DATE) {
+    <wvw-date-field [control]="control" [field]="field"></wvw-date-field>
+  }
+  @case (formFieldTypes.DATE_RANGE) {
+    <wvw-date-range-field [control]="control" [field]="field"></wvw-date-range-field>
+  }
+  @case (formFieldTypes.INPUT_NUMBER) {
+    <wvw-input-number-field [control]="control" [field]="field"></wvw-input-number-field>
+  }
+  @case (formFieldTypes.MULTISELECT) {
+    <wvw-multiselect-field [control]="control" [field]="field"></wvw-multiselect-field>
+  }
+  @case (formFieldTypes.NUMBER_RANGE) {
+    <wvw-number-range-field [control]="control" [field]="field"></wvw-number-range-field>
+  }
+  @case (formFieldTypes.RECAPTCHA) {
+    <wvw-recaptcha-field [control]="control" [field]="field"></wvw-recaptcha-field>
+  }
+  @case (formFieldTypes.SELECT) {
+    <wvw-select-field [control]="control" [field]="field"></wvw-select-field>
+  }
+  @case (formFieldTypes.TEXTAREA) {
+    <wvw-textarea-field [control]="control" [field]="field"></wvw-textarea-field>
+  }
+  @case (formFieldTypes.TIME) {
+    <wvw-time-field [control]="control" [field]="field"></wvw-time-field>
+  }
+  @default {
+    <wvw-input-field [control]="control" [field]="field"></wvw-input-field>
+  }
+}

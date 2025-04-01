@@ -1,0 +1,23 @@
+:root {
+  --mat-dialog-actions-alignment: flex-end;
+}
+
+.dialog-sm {
+  width: rem(400px);
+}
+
+.dialog-md {
+  width: rem(600px);
+}
+
+.dialog-lg {
+  width: rem(900px);
+}
+
+.dialog-xl {
+  width: rem(1200px);
+}
+
+.dialog-xxl {
+  width: rem(1500px);
+}

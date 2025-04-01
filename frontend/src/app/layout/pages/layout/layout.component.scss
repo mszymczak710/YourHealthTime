@@ -1,0 +1,9 @@
+@import 'utils';
+
+.layout-section {
+  min-height: calc(100vh - $menu-height);
+  background-image: url('../../../../assets/undraw_medicine_hqqg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 2rem;
+}

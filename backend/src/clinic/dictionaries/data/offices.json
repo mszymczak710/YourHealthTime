@@ -1,0 +1,122 @@
+[
+  {
+    "office_type": "Stomatologiczny",
+    "floor": 3,
+    "room_number": 101
+  },
+  {
+    "office_type": "Kardiologiczny",
+    "floor": 2,
+    "room_number": 102
+  },
+  {
+    "office_type": "Gabinet medycyny rodzinnej",
+    "floor": 0,
+    "room_number": 103
+  },
+  {
+    "office_type": "Pediatryczny",
+    "floor": 0,
+    "room_number": 104
+  },
+  {
+    "office_type": "Ortopetyczny",
+    "floor": 2,
+    "room_number": 105
+  },
+  {
+    "office_type": "Dermatologiczny",
+    "floor": 3,
+    "room_number": 106
+  },
+  {
+    "office_type": "Okulistyczny",
+    "floor": 1,
+    "room_number": 107
+  },
+  {
+    "office_type": "Neurologiczny",
+    "floor": 3,
+    "room_number": 108
+  },
+  {
+    "office_type": "Gabinet medycyny rodzinnej",
+    "floor": 2,
+    "room_number": 109
+  },
+  {
+    "office_type": "Ginekologiczny",
+    "floor": 0,
+    "room_number": 110
+  },
+  {
+    "office_type": "Urologiczny",
+    "floor": 2,
+    "room_number": 111
+  },
+  {
+    "office_type": "Pediatryczny",
+    "floor": 1,
+    "room_number": 111
+  },
+  {
+    "office_type": "Endokrynologiczny",
+    "floor": 0,
+    "room_number": 112
+  },
+  {
+    "office_type": "Psychologiczny",
+    "floor": 1,
+    "room_number": 113
+  },
+  {
+    "office_type": "Reumatologiczny",
+    "floor": 0,
+    "room_number": 114
+  },
+  {
+    "office_type": "Pulmonologiczny",
+    "floor": 2,
+    "room_number": 115
+  },
+  {
+    "office_type": "Laryngologiczny",
+    "floor": 0,
+    "room_number": 116
+  },
+  {
+    "office_type": "Gabinet medycyny rodzinnej",
+    "floor": 1,
+    "room_number": 117
+  },
+  {
+    "office_type": "Pediatryczny",
+    "floor": 2,
+    "room_number": 118
+  },
+  {
+    "office_type": "Diabetologiczny",
+    "floor": 3,
+    "room_number": 119
+  },
+  {
+    "office_type": "Gabinet medycyny pracy",
+    "floor": 2,
+    "room_number": 120
+  },
+  {
+    "office_type": "Nefrologiczny",
+    "floor": 3,
+    "room_number": 121
+  },
+  {
+    "office_type": "Onkologiczny",
+    "floor": 1,
+    "room_number": 122
+  },
+  {
+    "office_type": "Chirurgiczny",
+    "floor": 3,
+    "room_number": 123
+  }
+]

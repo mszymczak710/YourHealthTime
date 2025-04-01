@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+@function get-self-hosted-selector($selector, $self-hosted) {
+  @if $self-hosted {
+    $selector: '&' + $selector;
+  }
+  @return $selector;
+}
+
+@function rem($size-in-px) {
+  @return math.div($size-in-px, $fs-base) * 1rem;
+}

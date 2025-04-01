@@ -1,0 +1,9 @@
+.vscode/
+__pycache__/
+backend/.coverage
+backend/.ruff_cache
+backend/.pytest_cache
+backend/.venv
+backend/backend.egg-info
+backend/coverage.xml
+.env

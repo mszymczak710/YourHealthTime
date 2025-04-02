@@ -1,48 +1,34 @@
+import { inject } from '@angular/core';
 import { Routes } from '@angular/router';
 
-import { EmailVerificationComponent, ResetPasswordConfirmationComponent } from '@auth/components/';
 import { UserRole } from '@auth/types';
 
-import { roleGuard } from '@core/guards/role.guard';
-
-import { CountriesListComponent } from '@dictionaries/countries/pages';
-import { DiseasesListComponent } from '@dictionaries/diseases/pages';
-import { MedicinesListComponent } from '@dictionaries/medicines/pages';
-import { OfficesListComponent } from '@dictionaries/offices/pages';
-import { SpecializationsListComponent } from '@dictionaries/specializations/pages';
-
-import { DashboardComponent, PageNotFoundComponent } from '@layout/components';
-import { NoPermissionsComponent } from '@layout/components/no-permissions/no-permissions.component';
-
-import { PrescriptionsListComponent } from '@prescriptions/pages';
-
-import { DoctorsListComponent } from '@roles/doctors/pages';
-import { NursesListComponent } from '@roles/nurses/pages';
-import { PatientsListComponent } from '@roles/patients/pages';
-
-import { VisitsListComponent } from '@visits/pages';
+import { ROLE_GUARD } from '@core/guards';
 
 export const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  {
+    path: '',
+    loadComponent: () => import('@layout/components/dashboard/dashboard.component').then(m => m.DashboardComponent)
+  },
   {
     path: 'uzytkownicy',
     children: [
       {
         path: 'lekarze',
-        component: DoctorsListComponent,
-        canActivate: [roleGuard],
+        loadComponent: () => import('@roles/doctors/pages/doctors-list/doctors-list.component').then(m => m.DoctorsListComponent),
+        canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
         data: { roles: [UserRole.NURSE, UserRole.DOCTOR, UserRole.ADMIN] }
       },
       {
         path: 'pacjenci',
-        component: PatientsListComponent,
-        canActivate: [roleGuard],
+        loadComponent: () => import('@roles/patients/pages/patients-list/patients-list.component').then(m => m.PatientsListComponent),
+        canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
         data: { roles: [UserRole.NURSE, UserRole.DOCTOR, UserRole.ADMIN] }
       },
       {
         path: 'pielegniarki',
-        component: NursesListComponent,
-        canActivate: [roleGuard],
+        loadComponent: () => import('@roles/nurses/pages/nurses-list/nurses-list.component').then(m => m.NursesListComponent),
+        canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
         data: { roles: [UserRole.DOCTOR, UserRole.ADMIN] }
       }
     ]
@@ -52,27 +38,36 @@ export const routes: Routes = [
     children: [
       {
         path: 'choroby',
-        component: DiseasesListComponent,
-        canActivate: [roleGuard],
+        loadComponent: () =>
+          import('@dictionaries/diseases/pages/diseases-list/diseases-list.component').then(m => m.DiseasesListComponent),
+        canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
         data: { roles: [UserRole.DOCTOR, UserRole.ADMIN] }
       },
-      { path: 'kraje', component: CountriesListComponent },
+      {
+        path: 'kraje',
+        loadComponent: () =>
+          import('@dictionaries/countries/pages/countries-list/countries-list.component').then(m => m.CountriesListComponent)
+      },
       {
         path: 'leki',
-        component: MedicinesListComponent,
-        canActivate: [roleGuard],
+        loadComponent: () =>
+          import('@dictionaries/medicines/pages/medicines-list/medicines-list.component').then(m => m.MedicinesListComponent),
+        canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
         data: { roles: [UserRole.DOCTOR, UserRole.ADMIN] }
       },
       {
         path: 'gabinety',
-        component: OfficesListComponent,
-        canActivate: [roleGuard],
+        loadComponent: () => import('@dictionaries/offices/pages/offices-list/offices-list.component').then(m => m.OfficesListComponent),
+        canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
         data: { roles: [UserRole.ADMIN, UserRole.DOCTOR, UserRole.NURSE, UserRole.PATIENT] }
       },
       {
         path: 'specjalizacje',
-        component: SpecializationsListComponent,
-        canActivate: [roleGuard],
+        loadComponent: () =>
+          import('@dictionaries/specializations/pages/specializations-list/specializations-list.component').then(
+            m => m.SpecializationsListComponent
+          ),
+        canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
         data: { roles: [UserRole.DOCTOR, UserRole.ADMIN] }
       },
       { path: '', redirectTo: '/', pathMatch: 'full' }
@@ -80,25 +75,35 @@ export const routes: Routes = [
   },
   {
     path: 'wizyty',
-    component: VisitsListComponent,
-    canActivate: [roleGuard],
+    loadComponent: () => import('@visits/pages/visits-list/visits-list.component').then(m => m.VisitsListComponent),
+    canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
     data: { roles: [UserRole.ADMIN, UserRole.DOCTOR, UserRole.NURSE, UserRole.PATIENT] }
   },
   {
     path: 'recepty',
-    component: PrescriptionsListComponent,
-    canActivate: [roleGuard],
+    loadComponent: () =>
+      import('@prescriptions/pages/prescriptions-list/prescriptions-list.component').then(m => m.PrescriptionsListComponent),
+    canActivate: [(route, state) => inject(ROLE_GUARD)(route, state)],
     data: { roles: [UserRole.ADMIN, UserRole.DOCTOR, UserRole.PATIENT] }
   },
   {
     path: 'verify-email/:uidb64/:token',
-    component: EmailVerificationComponent
+    loadComponent: () => import('@auth/components/email-verification/email-verification.component').then(m => m.EmailVerificationComponent)
   },
   {
     path: 'reset-password/:uidb64/:token',
-    component: ResetPasswordConfirmationComponent
+    loadComponent: () =>
+      import('@auth/components/reset-password-confirmation/reset-password-confirmation.component').then(
+        m => m.ResetPasswordConfirmationComponent
+      )
   },
-  { path: 'no-permissions', component: NoPermissionsComponent },
-  { path: '404', component: PageNotFoundComponent },
+  {
+    path: 'no-permissions',
+    loadComponent: () => import('@layout/components/no-permissions/no-permissions.component').then(m => m.NoPermissionsComponent)
+  },
+  {
+    path: '404',
+    loadComponent: () => import('@layout/components/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)
+  },
   { path: '**', redirectTo: '/404' }
 ];

@@ -1,13 +1,15 @@
-import { inject } from '@angular/core';
+import { InjectionToken, inject } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot } from '@angular/router';
 
 import { AuthFacade } from '@auth/services';
 import { UserRole } from '@auth/types';
 
+export const ROLE_GUARD = new InjectionToken<CanActivateFn>('roleGuard');
+
 export const roleGuard: CanActivateFn = (route: ActivatedRouteSnapshot, _state: RouterStateSnapshot) => {
   const authFacade = inject(AuthFacade);
   const router = inject(Router);
-
+  console.log('roleGuard');
   const allowedRoles = route.data?.['roles'] as UserRole[] | undefined;
 
   // Jeśli brak wymaganych ról — brak sprawdzenia

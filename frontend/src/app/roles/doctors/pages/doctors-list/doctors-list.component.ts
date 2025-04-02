@@ -25,7 +25,8 @@ import { Doctor } from '@roles/doctors/types';
 import { ConfirmDialogComponent } from '@shared/shared-confirm/components';
 import { ConfirmDialogData } from '@shared/shared-confirm/types';
 import { TableActionComponent, TableCellLoaderComponent, TableFiltersComponent } from '@shared/shared-table/components';
-import { ExpandableRowAnimation, FiltersToggleExpandAnimation, TableRowExpanderComponentBase } from '@shared/shared-table/misc';
+import { ExpandableRowAnimation, FiltersToggleExpandAnimation } from '@shared/shared-table/misc';
+import { TableRowExpanderComponentBase } from '@shared/shared-table/misc/table-row-expander.component-base';
 import { TableAction } from '@shared/shared-table/types';
 
 import { DoctorsListHelperService } from './doctors-list-helper.service';

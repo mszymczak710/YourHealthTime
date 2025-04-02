@@ -12,6 +12,7 @@ import { provideToastr } from 'ngx-toastr';
 import { AuthInterceptor } from '@auth/interceptors';
 import { AuthFacade } from '@auth/services';
 
+import { ROLE_GUARD, roleGuard } from '@core/guards';
 import { initializeApp } from '@core/initializers';
 import { CUSTOM_DATE_FORMATS } from '@core/misc';
 
@@ -39,6 +40,10 @@ export const appConfig: ApplicationConfig = {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
+    },
+    {
+      provide: ROLE_GUARD,
+      useValue: roleGuard
     },
     {
       provide: HTTP_INTERCEPTORS,

@@ -17,7 +17,8 @@ import { MedicinesDataService, MedicinesFacade } from '@dictionaries/medicines/s
 import { Medicine } from '@dictionaries/medicines/types';
 
 import { TableCellLoaderComponent, TableFiltersComponent } from '@shared/shared-table/components';
-import { ExpandableRowAnimation, FiltersToggleExpandAnimation, TableRowExpanderComponentBase } from '@shared/shared-table/misc';
+import { ExpandableRowAnimation, FiltersToggleExpandAnimation } from '@shared/shared-table/misc';
+import { TableRowExpanderComponentBase } from '@shared/shared-table/misc/table-row-expander.component-base';
 
 import { MedicinesListHelperService } from './medicines-list-helper.service';
 

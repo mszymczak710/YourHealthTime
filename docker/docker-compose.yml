@@ -22,7 +22,7 @@ services:
     volumes:
       - ../backend:/code
     depends_on:
-      - db
+      - database
   frontend:
     build:
       context: ../frontend/
@@ -32,4 +32,4 @@ services:
     volumes:
       - ../frontend:/code/
     depends_on:
-      - api
+      - backend

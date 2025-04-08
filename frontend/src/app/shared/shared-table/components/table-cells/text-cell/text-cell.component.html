@@ -1,0 +1,12 @@
+@if (column.styles.truncate) {
+  <div class="d-flex justify-content-between align-items-center">
+    <span class="text-truncate" [class.line-clamp]="isExpanded">
+      {{ getValue() }}
+    </span>
+    <button mat-icon-button (click)="toggleExpand()">
+      <mat-icon [svgIcon]="isExpanded ? 'chevron-double-up' : 'chevron-double-down'"></mat-icon>
+    </button>
+  </div>
+} @else {
+  {{ getValue() }}
+}

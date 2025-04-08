@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{ confirmData.title }}</h2>
+
+<mat-dialog-content>
+  @if (errorMessage) {
+    <span class="alert alert-danger d-block mb-3">{{ errorMessage }}</span>
+  }
+  <span>{{ confirmData.content }}</span>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button color="primary" mat-button mat-dialog-close>{{ confirmData.cancelLabel }}</button>
+  <button cdkFocusInitial mat-flat-button color="accent" type="submit" (click)="confirm()">
+    <yht-spinner [visible]="saving"></yht-spinner>
+    {{ confirmData.confirmLabel }}
+  </button>
+</mat-dialog-actions>

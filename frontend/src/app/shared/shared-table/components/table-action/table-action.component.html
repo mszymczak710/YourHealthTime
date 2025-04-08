@@ -1,0 +1,27 @@
+@if (action.icon) {
+  <div [matTooltip]="disabledLabel(row)">
+    <button
+      [yhtPermissionDisabled]="action.permissions"
+      [color]="action.color"
+      [disabled]="actionDisabled(row)"
+      mat-icon-button
+      [matTooltip]="action.label"
+      (click)="action.action(row)"
+    >
+      <mat-icon [svgIcon]="action.icon"></mat-icon>
+    </button>
+  </div>
+} @else {
+  <div [matTooltip]="disabledLabel(row)">
+    <button
+      [yhtPermissionDisabled]="action.permissions"
+      [color]="action.color"
+      [disabled]="actionDisabled(row)"
+      mat-flat-button
+      [matTooltip]="action.label"
+      (click)="action.action(row)"
+    >
+      {{ action.label }}
+    </button>
+  </div>
+}

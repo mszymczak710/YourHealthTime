@@ -1,0 +1,108 @@
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-form-field-required-marker {
+  color: $warn;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  .mat-mdc-form-field-hint-wrapper,
+  .mat-mdc-form-field-error-wrapper {
+    position: relative;
+    bottom: rem(20px);
+    top: 100%;
+    padding: 0 rem(4px);
+  }
+}
+
+.mat-mdc-form-field-icon-suffix {
+  .mat-mdc-progress-spinner {
+    transform: translate(-150%, -50%);
+  }
+}
+
+fieldset {
+  border-radius: $border-radius;
+  padding: 0.5rem;
+
+  legend {
+    width: auto;
+    padding: 0 0.5rem;
+    float: none;
+    font-size: $fs-base * 1.5;
+    font-weight: 500;
+  }
+}
+
+.yht-field {
+  input[type='password']::-ms-reveal,
+  input[type='password']::-ms-clear {
+    display: none;
+  }
+
+  .mat-mdc-form-field.mat-form-field-appearance-outline.readonly {
+    .mdc-text-field--outlined .mdc-notched-outline {
+      opacity: 0;
+    }
+
+    .mdc-text-field--focused .mdc-notched-outline {
+      opacity: 1;
+    }
+  }
+
+  .field-label {
+    display: block;
+    padding-bottom: rem(3px);
+    padding-left: rem(6px);
+    font-weight: 500;
+  }
+
+  .field-wrapper {
+    display: block;
+    margin: rem(4px) 0 rem(20px) rem(8px);
+  }
+
+  .mat-mdc-form-field-hint {
+    font-size: rem(12px);
+  }
+
+  .mat-mdc-form-field-error {
+    font-size: rem(12px);
+  }
+
+  .toggle-group {
+    display: flex;
+    width: 100%;
+  }
+
+  .toggle-option {
+    flex: 1;
+    max-width: calc(100% / var(--toggle-count));
+
+    &.mat-button-toggle-checked {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  .input-range-number-field {
+    .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align {
+      display: none;
+    }
+  }
+
+  .mat-mdc-form-field-type-mat-date-range-input {
+    .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align {
+      display: none;
+    }
+  }
+
+  .mat-button-toggle-group.mat-button-toggle-group-appearance-standard {
+    .mat-button-toggle.mat-button-toggle-appearance-standard {
+      .mat-button-toggle-button {
+        min-height: 44px;
+      }
+    }
+  }
+}

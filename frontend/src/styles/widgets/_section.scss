@@ -1,0 +1,11 @@
+.yht-section {
+  .section-heading-wrapper {
+    display: flex;
+    gap: 0.5rem;
+
+    .section-heading {
+      text-transform: uppercase;
+      color: $primary;
+    }
+  }
+}

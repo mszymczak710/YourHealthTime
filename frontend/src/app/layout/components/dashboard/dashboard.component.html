@@ -1,0 +1,7 @@
+<div class="d-flex flex-column align-items-center justify-content-center">
+  <yht-admin-dashboard *yhtPermission="[userRole.ADMIN]" [user]="user"></yht-admin-dashboard>
+  <yht-anonymous-dashboard *yhtPermission="[]"></yht-anonymous-dashboard>
+  <yht-doctor-dashboard *yhtPermission="[userRole.DOCTOR]" [user]="user"></yht-doctor-dashboard>
+  <yht-nurse-dashboard *yhtPermission="[userRole.NURSE]" [user]="user"></yht-nurse-dashboard>
+  <yht-patient-dashboard *yhtPermission="[userRole.PATIENT]" [user]="user"></yht-patient-dashboard>
+</div>

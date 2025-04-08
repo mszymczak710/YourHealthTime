@@ -1,0 +1,14 @@
+.readonly {
+  .mat-datepicker-toggle {
+    display: none;
+  }
+}
+
+.mat-datepicker-toggle {
+  .mat-mdc-icon-button.mat-mdc-button-base {
+    svg {
+      width: rem(20px);
+      height: rem(20px);
+    }
+  }
+}

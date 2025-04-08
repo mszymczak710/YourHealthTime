@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333366;
+        }
+        p {
+            color: #666666;
+        }
+        a.verify-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #3498db;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h1>Witaj {{ user.first_name }} w aplikacji Your Health Time!</h1>
+        <p>Dziękujemy za rejestrację w naszym systemie zarządzania przychodnią. Aby potwierdzić swój adres e-mail i dokończyć rejestrację, kliknij poniższy link: </p>
+        <a href="{{ verification_link }}" class="verify-btn">Potwierdź swój adres e-mail</a>
+        <br>
+        <p>Jeśli to nie Ty zakładałeś konto w naszej aplikacji, zignoruj tę wiadomość.</p>
+        <br>
+        <p>Mamy nadzieję, że nasza aplikacja spełni Twoje oczekiwania i przyniesie wiele korzyści dla Twojego zdrowia oraz komunikacji z Twoim lekarzem.</p>
+        <br>
+        <p>Jeśli masz jakiekolwiek pytania lub potrzebujesz pomocy, zawsze możesz odpowiedzieć na ten e-mail lub skontaktować się z nami przez formularz kontaktowy na naszej stronie internetowej.</p>
+        <br>
+        <p>Życzymy zdrowia i dobrego dnia!<br><strong>Zespół Your Health Time</strong></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@mixin element-size($selector, $size) {
+  #{$selector} {
+    width: $size;
+    height: $size;
+    line-height: $size;
+
+    @content;
+  }
+}
+
+@mixin mat-icon-button-size($size, $self-hosted: false, $change-font-size: false) {
+  $selector: get-self-hosted-selector('.mat-mdc-icon-button', $self-hosted);
+  @include element-size($selector, $size) {
+    @content;
+  }
+}
+
+@mixin mat-icon-size($size, $self-hosted: false) {
+  $selector: get-self-hosted-selector('.mat-icon', $self-hosted);
+  @include element-size($selector, $size) {
+    font-size: $size;
+    @content;
+  }
+}

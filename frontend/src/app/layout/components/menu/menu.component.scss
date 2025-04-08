@@ -1,0 +1,12 @@
+@import 'utils';
+
+.menu {
+  &,
+  .mat-toolbar-row {
+    height: $menu-height;
+  }
+
+  .brand-logo {
+    height: $menu-height;
+  }
+}

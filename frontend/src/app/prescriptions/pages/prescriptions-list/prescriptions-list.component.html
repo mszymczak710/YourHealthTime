@@ -1,0 +1,89 @@
+<mat-card class="yht-section">
+  <div class="section-heading-wrapper">
+    <h1 class="section-heading">{{ strings.listHeader }}</h1>
+    <button mat-icon-button [matTooltip]="tableStrings.filterButton[showFilters ? 'collapse' : 'expand']" (click)="toggleFilters()">
+      <mat-icon [svgIcon]="showFilters ? 'filter-outline' : 'filter-off-outline'"></mat-icon>
+    </button>
+    <div class="flex-fill"></div>
+    <div class="d-flex align-items-center center">
+      <button [yhtPermissionDisabled]="[userRole.DOCTOR, userRole.ADMIN]" color="accent" mat-raised-button (click)="openCreateFormDialog()">
+        {{ strings.actions.create.label }}
+      </button>
+    </div>
+  </div>
+
+  <yht-spinner size="big" [visible]="loading"></yht-spinner>
+  <div class="table-container">
+    <div class="filters-wrapper" [@toggleExpand]="showFilters ? 'expanded' : 'collapsed'">
+      <yht-table-filters [columns]="columns" [httpError]="httpError" (filtersChanged)="onFiltersChanged($event)"></yht-table-filters>
+    </div>
+
+    <table mat-table [dataSource]="data" matSort multiTemplateDataRows (matSortChange)="onSortChange($event)">
+      <ng-container matColumnDef="expander">
+        <th class="narrow" mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let row">
+          <button
+            mat-icon-button
+            class="toggle-button"
+            [class.toggle-button-expanded]="row.isExpanded"
+            [matTooltip]="getExpanderLabel(row)"
+            (click)="rowExpanded(row); $event.stopPropagation()"
+          >
+            <mat-icon svgIcon="chevron-down"></mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      @for (column of columns; track column) {
+        <ng-container [matColumnDef]="column.name">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            [class]="column.styles?.cssClass"
+            [class.narrow]="column.styles?.isNarrow"
+            [disabled]="!column.sortable"
+            [style.text-align]="column.styles?.alignment"
+          >
+            {{ column.label }}
+          </th>
+          <td mat-cell *matCellDef="let row" [class]="column.styles?.cssClass" [style.text-align]="column.styles?.alignment">
+            <yht-table-cell-loader [column]="column" [row]="row"></yht-table-cell-loader>
+          </td>
+        </ng-container>
+      }
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="narrow" [stickyEnd]="true"></th>
+        <td mat-cell *matCellDef="let row">
+          <div class="d-flex justify-content-center align-items-center">
+            @for (action of actions; track action.label) {
+              <yht-table-action [action]="action" [row]="row"></yht-table-action>
+            }
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dosages">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let row" [attr.colspan]="displayedColumns.length">
+          <div class="element-detail" [@detailExpand]="row.isExpanded ? 'expanded' : 'collapsed'">
+            <yht-prescription-dosages-row [dosages]="row.dosages"></yht-prescription-dosages-row>
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr *matRowDef="let row; columns: displayedColumns" mat-row class="expandable-row" [class.expanded-row]="row.isExpanded"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['dosages']" class="detail-row"></tr>
+      <tr mat-mdc-no-data-row *matNoDataRow>
+        <td [attr.colspan]="displayedColumns.length" class="py-3 text-danger text-center">
+          @if (!loading) {
+            {{ commonStrings.noDataRow }}
+          }
+        </td>
+      </tr>
+    </table>
+
+    <mat-paginator showFirstLastButtons (page)="onPageChange($event)"></mat-paginator>
+  </div>
+</mat-card>

@@ -1,0 +1,38 @@
+@switch (field.type) {
+  @case (formFieldTypes.AUTOCOMPLETE) {
+    <yht-autocomplete-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-autocomplete-field>
+  }
+  @case (formFieldTypes.BOOLEAN) {
+    <yht-radio-boolean-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-radio-boolean-field>
+  }
+  @case (formFieldTypes.DATE) {
+    <yht-date-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-date-field>
+  }
+  @case (formFieldTypes.DATE_RANGE) {
+    <yht-date-range-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-date-range-field>
+  }
+  @case (formFieldTypes.INPUT_NUMBER) {
+    <yht-input-number-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-input-number-field>
+  }
+  @case (formFieldTypes.MULTISELECT) {
+    <yht-multiselect-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-multiselect-field>
+  }
+  @case (formFieldTypes.NUMBER_RANGE) {
+    <yht-number-range-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-number-range-field>
+  }
+  @case (formFieldTypes.RECAPTCHA) {
+    <yht-recaptcha-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-recaptcha-field>
+  }
+  @case (formFieldTypes.SELECT) {
+    <yht-select-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-select-field>
+  }
+  @case (formFieldTypes.TEXTAREA) {
+    <yht-textarea-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-textarea-field>
+  }
+  @case (formFieldTypes.TIME) {
+    <yht-time-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-time-field>
+  }
+  @default {
+    <yht-input-field [control]="control" [field]="field" [arrayName]="arrayName" [index]="index"></yht-input-field>
+  }
+}

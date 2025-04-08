@@ -1,0 +1,19 @@
+:root {
+  --mat-card-title-text-size: 2rem;
+}
+
+.mat-mdc-card {
+  padding: 1.75rem;
+  opacity: 0.95;
+
+  &:not(.yht-section) {
+    max-width: rem(800px);
+  }
+
+  &.error-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

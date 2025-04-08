@@ -1,0 +1,341 @@
+[
+  {
+    "name": "Gruźlica"
+  },
+  {
+    "name": "Zapalenie pęcherza"
+  },
+  {
+    "name": "Niedoczynność przytarczyc"
+  },
+  {
+    "name": "Zespół Turnera"
+  },
+  {
+    "name": "Rak płuc"
+  },
+  {
+    "name": "Kamica nerkowa"
+  },
+  {
+    "name": "Grzybica"
+  },
+  {
+    "name": "Przeziębienie"
+  },
+  {
+    "name": "Gonorrhea"
+  },
+  {
+    "name": "Egzema"
+  },
+  {
+    "name": "Ospa wietrzna"
+  },
+  {
+    "name": "Zespół chronicznego zmęczenia"
+  },
+  {
+    "name": "Kamica żółciowa"
+  },
+  {
+    "name": "Zespół Marfana"
+  },
+  {
+    "name": "Krztusiec"
+  },
+  {
+    "name": "Grypa"
+  },
+  {
+    "name": "Zapalenie wątroby typu B"
+  },
+  {
+    "name": "Zaćma"
+  },
+  {
+    "name": "Fibromialgia"
+  },
+  {
+    "name": "Dystonia"
+  },
+  {
+    "name": "Zapalenie zatok"
+  },
+  {
+    "name": "Choroba wrzodowa żołądka i dwunastnicy"
+  },
+  {
+    "name": "Mal de debarquement"
+  },
+  {
+    "name": "Endometrioza"
+  },
+  {
+    "name": "Choroba Crohna"
+  },
+  {
+    "name": "Zapalenie wątroby typu C"
+  },
+  {
+    "name": "Toxoplasmoza"
+  },
+  {
+    "name": "Astma"
+  },
+  {
+    "name": "Migrena"
+  },
+  {
+    "name": "Zespół Downa"
+  },
+  {
+    "name": "Choroby oczu"
+  },
+  {
+    "name": "Choroba wieńcowa"
+  },
+  {
+    "name": "Zespół Stevensa-Johnsona"
+  },
+  {
+    "name": "Alergia"
+  },
+  {
+    "name": "Choroby tarczycy"
+  },
+  {
+    "name": "Rak piersi"
+  },
+  {
+    "name": "Odra"
+  },
+  {
+    "name": "Rak żołądka"
+  },
+  {
+    "name": "Dna moczanowa"
+  },
+  {
+    "name": "Osteoporoza"
+  },
+  {
+    "name": "Zespół Klinefeltera"
+  },
+  {
+    "name": "Trądzik"
+  },
+  {
+    "name": "Rak szyjki macicy"
+  },
+  {
+    "name": "Zespół Tourette’a"
+  },
+  {
+    "name": "Refluks żołądkowo-przełykowy"
+  },
+  {
+    "name": "Zapalenie gruczołu krokowego"
+  },
+  {
+    "name": "Zespół cieśni nadgarstka"
+  },
+  {
+    "name": "Wrzodziejące zapalenie jelita grubego"
+  },
+  {
+    "name": "Zapalenie wątroby typu A"
+  },
+  {
+    "name": "Zespół policystycznych jajników"
+  },
+  {
+    "name": "HIV/AIDS"
+  },
+  {
+    "name": "Zespół suchego oka"
+  },
+  {
+    "name": "Tężec"
+  },
+  {
+    "name": "Cholera"
+  },
+  {
+    "name": "Zapalenie oskrzeli"
+  },
+  {
+    "name": "Choroba Gauchera"
+  },
+  {
+    "name": "Katarakta"
+  },
+  {
+    "name": "Epilepsja"
+  },
+  {
+    "name": "Zespół Aspergera"
+  },
+  {
+    "name": "Zapalenie stawów"
+  },
+  {
+    "name": "Depresja"
+  },
+  {
+    "name": "Choroba Legionistów"
+  },
+  {
+    "name": "Leiszmanioza"
+  },
+  {
+    "name": "Choroba Addisona"
+  },
+  {
+    "name": "Angina"
+  },
+  {
+    "name": "Jaskra"
+  },
+  {
+    "name": "Półpasiec"
+  },
+  {
+    "name": "Choroba Fabry’ego"
+  },
+  {
+    "name": "Świerzb"
+  },
+  {
+    "name": "Zaburzenia snu"
+  },
+  {
+    "name": "Choroba Alzheimera"
+  },
+  {
+    "name": "Rak jajnika"
+  },
+  {
+    "name": "Zapalenie ucha zewnętrznego"
+  },
+  {
+    "name": "Ludzka bąblowica"
+  },
+  {
+    "name": "Dysleksja"
+  },
+  {
+    "name": "Szkarlatyna"
+  },
+  {
+    "name": "ADHD"
+  },
+  {
+    "name": "Sarkoidoza"
+  },
+  {
+    "name": "Choroba Krabbe"
+  },
+  {
+    "name": "Choroba Meniere’a"
+  },
+  {
+    "name": "Zespół napięcia przedmiesiączkowego"
+  },
+  {
+    "name": "Dur brzuszny"
+  },
+  {
+    "name": "Borelioza"
+  },
+  {
+    "name": "Nadciśnienie tętnicze"
+  },
+  {
+    "name": "Rak skóry"
+  },
+  {
+    "name": "Cukrzyca"
+  },
+  {
+    "name": "Zespół Cushinga"
+  },
+  {
+    "name": "Stwardnienie rozsiane"
+  },
+  {
+    "name": "Lęk"
+  },
+  {
+    "name": "Łuszczyca"
+  },
+  {
+    "name": "Zakażenia dróg moczowych"
+  },
+  {
+    "name": "Osteoartroza"
+  },
+  {
+    "name": "Choroby skóry"
+  },
+  {
+    "name": "Rzęsistkowica"
+  },
+  {
+    "name": "Anemia"
+  },
+  {
+    "name": "Zespół Pradera-Williego"
+  },
+  {
+    "name": "Dżuma"
+  },
+  {
+    "name": "Wszy łonowe"
+  },
+  {
+    "name": "Zapalenie ucha środkowego"
+  },
+  {
+    "name": "Zapalenie spojówek"
+  },
+  {
+    "name": "Choroba Huntingtona"
+  },
+  {
+    "name": "Rak jelita grubego"
+  },
+  {
+    "name": "Białaczka"
+  },
+  {
+    "name": "Rak prostaty"
+  },
+  {
+    "name": "Nadczynność tarczycy"
+  },
+  {
+    "name": "Chlamydia"
+  },
+  {
+    "name": "Choroba Wilsona"
+  },
+  {
+    "name": "Różyczka"
+  },
+  {
+    "name": "Choroba Parkinsona"
+  },
+  {
+    "name": "Świnka"
+  },
+  {
+    "name": "Choroba zwyrodnieniowa stawów"
+  },
+  {
+    "name": "Zawał serca"
+  },
+  {
+    "name": "Rak wątroby"
+  }
+]

@@ -1,0 +1,55 @@
+<div class="yht-field">
+  @if (!field.labelledBy) {
+    <label class="field-label" [class.cdk-visually-hidden]="field.labelHidden" [id]="getFieldId() + '-label'" [for]="fieldId">
+      {{ field.label }}
+      <yht-required-mark [readonly]="field.readonly" [required]="field.required"></yht-required-mark>
+    </label>
+  }
+  <mat-form-field [class.readonly]="field.readonly">
+    <input
+      #input
+      [attr.aria-labelledby]="field.labelledBy || null"
+      matInput
+      [formControl]="control"
+      [id]="getFieldId()"
+      [matAutocomplete]="autocomplete"
+      [placeholder]="placeholder"
+      [required]="field.required"
+      [readonly]="field.readonly"
+      type="text"
+      (input)="onInput(input.value)"
+      (focus)="onFocus()"
+    />
+    <yht-spinner class="spinner" matSuffix [visible]="loading"></yht-spinner>
+    @if (!loading && !field.readonly) {
+      <mat-icon matSuffix svgIcon="magnify"></mat-icon>
+    }
+
+    <mat-autocomplete
+      #autocomplete="matAutocomplete"
+      [displayWith]="getOptionLabel.bind(this)"
+      [requireSelection]="true"
+      (opened)="autocompleteOpened()"
+      (optionActivated)="optionActivated($event)"
+      (optionSelected)="optionSelected($event.option.value)"
+      (yhtOptionScroll)="onAutocompleteScroll()"
+    >
+      @if (!loading) {
+        @for (option of options; track option) {
+          <mat-option [matTooltip]="getOptionLabel(option)" [value]="option">
+            {{ getOptionLabel(option) }}
+          </mat-option>
+        }
+      }
+      @if (!notEnoughChars && optionNotFound && !loading) {
+        <mat-option disabled tabindex="-1">{{ commonStrings.optionNotFound }}</mat-option>
+      }
+      @if (notEnoughChars && !loading && minHintChars > 0) {
+        <mat-option disabled tabindex="-1">{{ getNotEnoughCharsLabel() }}</mat-option>
+      }
+    </mat-autocomplete>
+    @if (field.errors) {
+      <mat-error>{{ field.errors }}</mat-error>
+    }
+  </mat-form-field>
+</div>

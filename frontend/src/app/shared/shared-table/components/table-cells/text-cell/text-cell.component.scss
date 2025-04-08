@@ -1,0 +1,20 @@
+@import 'utils';
+
+@include mat-icon-button-size(1.5rem) {
+  @include mat-icon-size(1rem);
+}
+
+.text-truncate {
+  display: block;
+  max-width: rem(150px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &.line-clamp {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    word-break: break-word;
+  }
+}

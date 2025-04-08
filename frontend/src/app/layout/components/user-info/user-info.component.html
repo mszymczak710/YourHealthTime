@@ -1,0 +1,17 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon svgIcon="account"></mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <div class="user-info">
+    <span class="user-name">{{ user.first_name }} {{ user.last_name }}</span>
+    <span>{{ user.email }}</span>
+    <span>
+      {{ strings.menu.user.role.title }}
+      <span class="text-primary">{{ user.getRole() }}</span>
+    </span>
+  </div>
+
+  @for (menuItem of userMenuConfig; track menuItem) {
+    <button *yhtPermission="menuItem.roles" mat-menu-item (click)="menuItem.action()">{{ menuItem.label }}</button>
+  }
+</mat-menu>

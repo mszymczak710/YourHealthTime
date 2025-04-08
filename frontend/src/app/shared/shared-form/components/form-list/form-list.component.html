@@ -1,0 +1,57 @@
+<div [formGroup]="form">
+  @if (label) {
+    <label class="form-list-label">
+      {{ label }}
+      <yht-required-mark [readonly]="readonly" [required]="required"></yht-required-mark>
+    </label>
+  }
+
+  <table class="form-list-table">
+    @if (formArray?.length) {
+      <thead>
+        <tr>
+          @for (field of fields; track field; let last = $last) {
+            <th class="ps-2">
+              {{ field.label }}
+              <yht-required-mark [readonly]="field.readonly" [required]="field.required"></yht-required-mark>
+            </th>
+          }
+          @if (!readonly) {
+            <th></th>
+          }
+        </tr>
+      </thead>
+
+      <tbody [formArrayName]="formArrayName">
+        @for (group of formArray.controls; track group; let i = $index) {
+          <tr [formGroupName]="i">
+            @for (field of fields; track field) {
+              <td>
+                <yht-form-field-switcher
+                  class="flex-grow-1"
+                  [control]="formArray.at(i).get(field.name)"
+                  [field]="field"
+                  [arrayName]="formArrayName"
+                  [index]="i"
+                ></yht-form-field-switcher>
+              </td>
+            }
+            @if (!readonly) {
+              <td>
+                <button mat-icon-button (click)="removeItem(i)">
+                  <mat-icon svgIcon="delete"></mat-icon>
+                </button>
+              </td>
+            }
+          </tr>
+        }
+      </tbody>
+    }
+  </table>
+
+  @if (!readonly) {
+    <button [disabled]="addButtonDisabled()" mat-raised-button color="primary" (click)="addItem()">
+      {{ addButtonLabel }}
+    </button>
+  }
+</div>

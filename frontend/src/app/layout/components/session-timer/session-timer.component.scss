@@ -1,0 +1,18 @@
+@import 'utils';
+
+:host {
+  display: block;
+  padding: 1rem 0;
+}
+
+.timer-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: rem(40px);
+  font-size: rem(14px);
+
+  @include mat-icon-button-size(2rem) {
+    @include mat-icon-size(1.5rem);
+  }
+}

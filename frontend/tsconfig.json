@@ -1,0 +1,35 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "angularCompilerOptions": {
+    "strictTemplates": false
+  },
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "lib": ["ES2022", "dom"],
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@auth/*": ["src/app/auth/*"],
+      "@core/*": ["src/app/core/*"],
+      "@dictionaries/*": ["src/app/dictionaries/*"],
+      "@layout/*": ["src/app/layout/*"],
+      "@prescriptions/*": ["src/app/prescriptions/*"],
+      "@roles/*": ["src/app/roles/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@visits/*": ["src/app/visits/*"],
+      "@environments/*": ["src/environments/*"],
+      "@assets/*": ["src/assets/*"]
+    },
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "target": "ES2022",
+    "useDefineForClassFields": false
+  }
+}

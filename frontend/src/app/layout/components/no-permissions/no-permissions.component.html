@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center align-items-center">
+  <mat-card class="error-card">
+    <mat-card-title class="text-danger">{{ strings.noPermissions.title }}</mat-card-title>
+    <mat-card-content class="mt-3">
+      <p>{{ strings.noPermissions.text }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="mt-3" color="primary" mat-flat-button [routerLink]="['/']">{{ strings.noPermissions.button }}</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

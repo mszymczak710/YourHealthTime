@@ -1,0 +1,36 @@
+<div class="yht-field">
+  @if (!field.labelledBy) {
+    <label class="field-label" [class.cdk-visually-hidden]="field.labelHidden" [id]="getFieldId() + '-label'" [for]="getFieldId()">
+      {{ field.label }}
+      <yht-required-mark [readonly]="field.readonly" [required]="field.required"></yht-required-mark>
+    </label>
+  }
+  <mat-form-field>
+    <input
+      [formControl]="control"
+      [attr.aria-invalid]="control.invalid"
+      [attr.aria-labelledby]="field.labelledBy || null"
+      [id]="getFieldId()"
+      matInput
+      [matTimepicker]="timepicker"
+      [placeholder]="placeholder"
+      [required]="field.required"
+    />
+
+    <mat-timepicker-toggle matSuffix [for]="timepicker"></mat-timepicker-toggle>
+    <mat-timepicker #timepicker format="24h" orientation="horizontal">
+      <mat-timepicker-actions>
+        <button mat-button matTimepickerCancel type="button">
+          {{ commonStrings.cancel }}
+        </button>
+        <button mat-button matTimepickerApply type="button" (click)="submit($event)">
+          {{ commonStrings.save }}
+        </button>
+      </mat-timepicker-actions>
+    </mat-timepicker>
+
+    @if (field.errors) {
+      <mat-error>{{ field.errors }}</mat-error>
+    }
+  </mat-form-field>
+</div>

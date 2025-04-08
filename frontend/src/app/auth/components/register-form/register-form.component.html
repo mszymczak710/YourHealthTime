@@ -1,0 +1,68 @@
+<h2 mat-dialog-title>{{ strings.register.title }}</h2>
+
+<mat-dialog-content>
+  @if (form) {
+    <form>
+      @if (form.hasError('general')) {
+        <span class="alert alert-danger d-block mb-3">{{ form.getError('general') }}</span>
+      }
+
+      <mat-horizontal-stepper color="accent" animationDuration="0ms">
+        <ng-template matStepperIcon="edit" let-index="index">
+          {{ index + 1 }}
+        </ng-template>
+        <mat-step [stepControl]="form">
+          <ng-template matStepLabel>{{ strings.register.step.label.basicData }}</ng-template>
+          <ng-container *ngTemplateOutlet="fieldsTpl; context: { fields: fields, form: form, keys: fieldNames }"></ng-container>
+        </mat-step>
+        <mat-step [stepControl]="addressForm">
+          <ng-template matStepLabel>{{ strings.register.step.label.address }}</ng-template>
+          <ng-container
+            *ngTemplateOutlet="fieldsTpl; context: { fields: addressFields, form: addressForm, keys: addressFieldNames }"
+          ></ng-container>
+        </mat-step>
+        <mat-step [stepControl]="getFormControl('recaptcha_response')">
+          <ng-template matStepLabel>{{ strings.register.step.label.recaptcha }}</ng-template>
+          <yht-form-field-switcher
+            class="mt-3"
+            [control]="getFormControl('recaptcha_response')"
+            [field]="fields.get('recaptcha_response')"
+          ></yht-form-field-switcher>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </form>
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  @if (stepper) {
+    @if (isPreviousButtonVisible()) {
+      <button class="mr-auto" color="primary" mat-button (click)="onPreviousButtonClick()">{{ strings.register.step.previous }}</button>
+      <div class="flex-fill"></div>
+    }
+    <button color="primary" mat-button mat-dialog-close>{{ commonStrings.cancel }}</button>
+
+    @if (!isNextButtonVisible()) {
+      <button mat-flat-button color="accent" [disabled]="form.invalid || saving" type="submit" (click)="submit($event)">
+        {{ strings.register.button }}
+        <yht-spinner [visible]="saving"></yht-spinner>
+      </button>
+    } @else {
+      <button color="accent" mat-flat-button (click)="onNextButtonClick()">{{ strings.register.step.next }}</button>
+    }
+  }
+</mat-dialog-actions>
+
+<ng-template #fieldsTpl let-fields="fields" let-form="form" let-keys="keys">
+  <div [formGroup]="form" class="row mt-3">
+    @for (key of keys; track key) {
+      <ng-container *ngIf="fields.get(key); let field">
+        <yht-form-field-switcher
+          [class]="getFieldCssClass(key)"
+          [control]="getFormGroupControl(form, key)"
+          [field]="field"
+        ></yht-form-field-switcher>
+      </ng-container>
+    }
+  </div>
+</ng-template>

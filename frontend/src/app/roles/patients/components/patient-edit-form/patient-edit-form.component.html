@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>{{ strings.actions.edit.title }}</h2>
+
+<mat-dialog-content>
+  @if (form) {
+    <form>
+      @if (form.hasError('general')) {
+        <span class="alert alert-danger d-block mb-3">{{ form.getError('general') }}</span>
+      }
+
+      <fieldset class="border">
+        <legend class="fs-6">{{ strings.form.title.data }}</legend>
+        <ng-container *ngTemplateOutlet="fieldsTpl; context: { fields: userFields, form: userForm, keys: userFieldNames }"></ng-container>
+        <ng-container *ngTemplateOutlet="fieldsTpl; context: { fields: fields, form: form, keys: fieldNames }"></ng-container>
+      </fieldset>
+
+      <fieldset class="border mt-3">
+        <legend class="fs-6">{{ strings.form.title.address }}</legend>
+        <ng-container
+          *ngTemplateOutlet="fieldsTpl; context: { fields: addressFields, form: addressForm, keys: addressFieldNames }"
+        ></ng-container>
+      </fieldset>
+    </form>
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button color="primary" mat-button mat-dialog-close>{{ commonStrings.cancel }}</button>
+  <button mat-flat-button color="accent" [disabled]="form.invalid || saving" type="submit" (click)="submit($event)">
+    {{ commonStrings.save }}
+    <yht-spinner [visible]="saving"></yht-spinner>
+  </button>
+</mat-dialog-actions>
+
+<ng-template #fieldsTpl let-fields="fields" let-form="form" let-keys="keys">
+  <div [formGroup]="form" class="row">
+    @for (key of keys; track key) {
+      <ng-container *ngIf="fields.get(key); let field">
+        <yht-form-field-switcher class="col-4" [control]="getFormGroupControl(form, key)" [field]="field"></yht-form-field-switcher>
+      </ng-container>
+    }
+  </div>
+</ng-template>

@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <div class="row mt-3">
+    @for (fieldName of fieldNames; track fieldName) {
+      <ng-container *ngIf="fields.get(fieldName); let field">
+        <yht-form-field-switcher [control]="getFormControl(field.name)" [field]="field"></yht-form-field-switcher>
+      </ng-container>
+    }
+  </div>
+
+  <button color="primary" mat-button type="button" (click)="goToResetPasswordForm()">{{ strings.login.forgotPassword.button }}</button>
+</form>

@@ -1,0 +1,27 @@
+@if (fieldData) {
+  <div class="yht-field">
+    @if (!field.labelledBy) {
+      <label class="field-label" [class.cdk-visually-hidden]="field.labelHidden" [id]="getFieldId() + '-label'" [for]="getFieldId()">
+        {{ field.label }}
+        <yht-required-mark [readonly]="field.readonly" [required]="field.required"></yht-required-mark>
+      </label>
+    }
+    <mat-button-toggle-group
+      class="toggle-group"
+      [formControl]="control"
+      [hideSingleSelectionIndicator]="true"
+      [attr.aria-invalid]="control.invalid"
+      [attr.aria-labelledby]="field.labelledBy || null"
+      [id]="getFieldId()"
+    >
+      @for (option of fieldData.options; track option) {
+        <mat-button-toggle class="toggle-option" [disabled]="field.readonly || field.disabled" [value]="option.value">
+          {{ option.label }}
+        </mat-button-toggle>
+      }
+    </mat-button-toggle-group>
+    @if (field.errors) {
+      <mat-error>{{ field.errors }}</mat-error>
+    }
+  </div>
+}

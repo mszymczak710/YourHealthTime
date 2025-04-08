@@ -1,0 +1,7 @@
+<div class="d-flex flex-column align-items-center">
+  <re-captcha (resolved)="onRecaptchaResolved($event)" [siteKey]="siteKey" [formControl]="control"></re-captcha>
+
+  @if (field.errors) {
+    <mat-error class="my-2">{{ field.errors }}</mat-error>
+  }
+</div>

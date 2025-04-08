@@ -1,0 +1,24 @@
+@if (form) {
+  <mat-card>
+    <form [formGroup]="form">
+      @if (form.hasError('general')) {
+        <span class="alert alert-danger d-block mb-3">{{ form.getError('general') }}</span>
+      }
+
+      <fieldset class="border">
+        <legend>{{ strings.dashboard.nurse.title }}</legend>
+        <div class="row">
+          @for (fieldName of fieldNames; track fieldName) {
+            <ng-container *ngIf="fields.get(fieldName); let field">
+              <yht-form-field-switcher
+                class="col-6"
+                [control]="getFormGroupControl(form, field.name)"
+                [field]="field"
+              ></yht-form-field-switcher>
+            </ng-container>
+          }
+        </div>
+      </fieldset>
+    </form>
+  </mat-card>
+}

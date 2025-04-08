@@ -1,0 +1,61 @@
+<h2 mat-dialog-title>{{ strings.actions.create.title }}</h2>
+
+<mat-dialog-content>
+  @if (form) {
+    <form [formGroup]="form">
+      @if (form.hasError('general')) {
+        <span class="alert alert-danger d-block mb-3">{{ form.getError('general') }}</span>
+      }
+
+      <mat-horizontal-stepper color="accent" animationDuration="0ms">
+        <ng-template matStepperIcon="edit" let-index="index">
+          {{ index + 1 }}
+        </ng-template>
+        <mat-step [stepControl]="form">
+          <ng-template matStepLabel>{{ strings.form.step.label.basicData }}</ng-template>
+          <div class="row mt-3">
+            @for (fieldName of fieldNames; track fieldName) {
+              <ng-container *ngIf="fields.get(fieldName); let field">
+                <yht-form-field-switcher
+                  [class]="getFieldCssClass(field.name)"
+                  [control]="getFormControl(field.name)"
+                  [field]="field"
+                ></yht-form-field-switcher>
+              </ng-container>
+            }
+          </div>
+        </mat-step>
+        <mat-step [stepControl]="form">
+          <ng-template matStepLabel>{{ strings.form.step.label.dosages }}</ng-template>
+          <yht-form-list
+            [addButtonLabel]="strings.form.fields.dosages.addButtonLabel"
+            [fieldsMap]="dosagesFields"
+            [form]="form"
+            formArrayName="dosages"
+            [label]="strings.form.fields.dosages.label"
+            [required]="true"
+          ></yht-form-list>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </form>
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  @if (stepper) {
+    @if (isPreviousButtonVisible()) {
+      <button class="mr-auto" color="primary" mat-button (click)="onPreviousButtonClick()">{{ strings.form.step.previous }}</button>
+      <div class="flex-fill"></div>
+    }
+    <button color="primary" mat-button mat-dialog-close>{{ commonStrings.cancel }}</button>
+
+    @if (!isNextButtonVisible()) {
+      <button mat-flat-button color="accent" [disabled]="form.invalid || saving" type="submit" (click)="submit($event)">
+        {{ commonStrings.save }}
+        <yht-spinner [visible]="saving"></yht-spinner>
+      </button>
+    } @else {
+      <button color="accent" mat-flat-button (click)="onNextButtonClick()">{{ strings.form.step.next }}</button>
+    }
+  }
+</mat-dialog-actions>

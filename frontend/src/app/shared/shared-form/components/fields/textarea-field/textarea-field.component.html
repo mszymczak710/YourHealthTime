@@ -1,0 +1,27 @@
+<div class="yht-field">
+  @if (!field.labelledBy) {
+    <label class="field-label" [class.cdk-visually-hidden]="field.labelHidden" [id]="getFieldId() + '-label'" [for]="getFieldId()">
+      {{ field.label }}
+      <yht-required-mark [readonly]="field.readonly" [required]="field.required"></yht-required-mark>
+    </label>
+  }
+  <mat-form-field [class.readonly]="field.readonly">
+    <textarea
+      matInput
+      [attr.aria-invalid]="control.invalid"
+      [attr.aria-labelledby]="field.labelledBy || null"
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="1"
+      cdkAutosizeMaxRows="5"
+      [formControl]="control"
+      [id]="getFieldId()"
+      [placeholder]="placeholder"
+      [required]="field.required"
+    ></textarea>
+
+    @if (field.errors) {
+      <mat-error>{{ field.errors }}</mat-error>
+    }
+  </mat-form-field>
+</div>

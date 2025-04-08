@@ -1,0 +1,35 @@
+<div class="yht-field">
+  <label class="field-label">{{ field.label }}</label>
+  <div class="d-flex flex-nowrap" [formGroup]="form">
+    <mat-form-field class="input-range-number-field">
+      <input
+        matInput
+        [formControl]="form.get(minFieldName)"
+        [matTooltip]="getTooltip(numberRange.MIN)"
+        [max]="max"
+        [min]="min"
+        [placeholder]="getPlaceholder(numberRange.MIN)"
+        [step]="step"
+        type="number"
+      />
+    </mat-form-field>
+    <div class="flex-fill px-2"></div>
+    <mat-form-field class="input-range-number-field">
+      <input
+        matInput
+        [formControl]="form.get(maxFieldName)"
+        [matTooltip]="getTooltip(numberRange.MAX)"
+        [max]="max"
+        [min]="min"
+        [placeholder]="getPlaceholder(numberRange.MAX)"
+        [step]="step"
+        type="number"
+      />
+    </mat-form-field>
+  </div>
+  @if (field.errors) {
+    <div class="field-wrapper">
+      <mat-error>{{ field.errors }}</mat-error>
+    </div>
+  }
+</div>

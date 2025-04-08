@@ -1,0 +1,12 @@
+@if (appInitialized) {
+  <yht-menu></yht-menu>
+  <div class="layout-section">
+    <yht-session-timer></yht-session-timer>
+    <router-outlet></router-outlet>
+  </div>
+}
+@if (errorOccurred) {
+  <div class="d-flex h-100 justify-content-center align-items-center">
+    <span class="alert alert-danger d-block">{{ strings.errorOccurred }}</span>
+  </div>
+}

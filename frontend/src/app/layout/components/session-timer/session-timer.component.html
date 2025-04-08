@@ -1,0 +1,17 @@
+<div class="timer-wrapper">
+  @if (timeLeft) {
+    <div class="d-flex align-items-center border border-primary border-3 px-2 rounded-2">
+      <span class="me-1">{{ strings.sessionTimer.label }}</span>
+      <strong>{{ formattedTime }}</strong>
+      <button
+        class="refresh-button ms-1"
+        color="accent"
+        mat-icon-button
+        [matTooltip]="strings.sessionTimer.tooltip"
+        (click)="refreshTokens()"
+      >
+        <mat-icon svgIcon="restore"></mat-icon>
+      </button>
+    </div>
+  }
+</div>

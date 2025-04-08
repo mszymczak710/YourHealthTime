@@ -1,0 +1,8 @@
+@if (dosages) {
+  <p class="h6 ps-3">{{ strings.prescription.dosages.label }}</p>
+  <ul class="mb-0">
+    @for (dosage of dosages; track dosage) {
+      <li>{{ getDosageInfo(dosage) }}</li>
+    }
+  </ul>
+}

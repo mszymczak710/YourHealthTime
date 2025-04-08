@@ -1,0 +1,32 @@
+<form class="border border-2 border-primary rounded-3 p-3" [formGroup]="form">
+  @if (form.hasError('general')) {
+    <span class="alert alert-danger d-block mb-3">{{ form.getError('general') }}</span>
+  }
+
+  <div class="d-flex flex-wrap">
+    @for (fieldName of fieldNames; track fieldName; let last = $last) {
+      <ng-container *ngIf="fields.get(fieldName); let field">
+        @if (!isExtraFilter(fieldName) || extraFiltersVisible) {
+          <yht-form-field-switcher
+            class="col-filter"
+            [class.pe-3]="!last"
+            [control]="getFormControl(field.name)"
+            [field]="field"
+          ></yht-form-field-switcher>
+        }
+      </ng-container>
+    }
+    @if (hasExtraFilters) {
+      <div class="d-flex align-items-center ps-2">
+        <button mat-button type="button" color="primary" (click)="toggleExtraFilters()">
+          {{ extraFiltersVisible ? strings.filters.hideExtra : strings.filters.showExtra }}
+        </button>
+      </div>
+    }
+  </div>
+
+  <div class="d-flex">
+    <button class="me-2" color="primary" mat-flat-button type="button" (click)="submit($event)">{{ strings.filters.apply }}</button>
+    <button color="primary" mat-button type="button" (click)="clear()">{{ strings.filters.clear }}</button>
+  </div>
+</form>

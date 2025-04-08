@@ -1,0 +1,8 @@
+@if (activeIngredients) {
+  <p class="h6 ps-3">{{ strings.medicine.active_ingredients.label }}</p>
+  <ul class="mb-0">
+    @for (ingredient of activeIngredients; track ingredient) {
+      <li>{{ getActiveIngredientInfo(ingredient) }}</li>
+    }
+  </ul>
+}

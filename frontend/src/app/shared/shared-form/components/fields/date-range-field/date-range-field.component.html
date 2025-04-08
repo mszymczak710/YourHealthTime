@@ -1,0 +1,34 @@
+<div class="yht-field">
+  <label class="field-label">
+    {{ field.label }}
+    <yht-required-mark [readonly]="field.readonly" [required]="field.required"></yht-required-mark>
+  </label>
+  <mat-form-field>
+    <mat-date-range-input [formGroup]="form" [rangePicker]="picker">
+      <input
+        matStartDate
+        [formControl]="form.get(afterFieldName)"
+        [matTooltip]="getTooltip('start')"
+        [placeholder]="getPlaceholder('start')"
+        (dateChange)="rangeDateChanged($event, dateSuffixes.AFTER)"
+      />
+      <input
+        matEndDate
+        [formControl]="form.get(beforeFieldName)"
+        [matTooltip]="getTooltip('end')"
+        [placeholder]="getPlaceholder('end')"
+        (dateChange)="rangeDateChanged($event, dateSuffixes.BEFORE)"
+      />
+    </mat-date-range-input>
+
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+  <div class="field-wrapper">
+    @if (field.errors) {
+      <mat-error>{{ field.errors }}</mat-error>
+    } @else {
+      <mat-hint>{{ hint }}</mat-hint>
+    }
+  </div>
+</div>

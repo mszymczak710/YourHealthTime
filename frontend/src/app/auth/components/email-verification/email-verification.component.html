@@ -1,0 +1,9 @@
+@if (errorMessage || message) {
+  <div class="d-flex flex-column align-items-center">
+    <div class="alert text-center" [ngClass]="message ? 'alert-success' : 'alert-danger'" role="alert">
+      <h3 class="alert-heading">{{ strings.emailVerification.title }}</h3>
+      <hr />
+      <p class="mb-0">{{ errorMessage || message }}</p>
+    </div>
+  </div>
+}

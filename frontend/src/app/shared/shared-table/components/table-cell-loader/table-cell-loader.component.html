@@ -1,0 +1,20 @@
+@switch (column.type) {
+  @case (columnTypes.BOOLEAN) {
+    <yht-boolean-cell [column]="column" [row]="row"></yht-boolean-cell>
+  }
+  @case (columnTypes.DATE) {
+    <yht-date-cell [column]="column" [row]="row"></yht-date-cell>
+  }
+  @case (columnTypes.DATETIME) {
+    <yht-datetime-cell [column]="column" [row]="row"></yht-datetime-cell>
+  }
+  @case (columnTypes.NUMBER) {
+    <yht-number-cell [column]="column" [row]="row"></yht-number-cell>
+  }
+  @case (columnTypes.SELECT) {
+    <yht-select-cell [column]="column" [row]="row"></yht-select-cell>
+  }
+  @default {
+    <yht-text-cell [column]="column" [row]="row"></yht-text-cell>
+  }
+}

@@ -1,0 +1,67 @@
+<mat-toolbar class="menu" color="primary">
+  <mat-toolbar-row>
+    <a [routerLink]="['/']">
+      <img class="brand-logo" src="assets/logo.png" alt="YourHealthTime" />
+    </a>
+
+    @for (menuItem of menuConfig; track menuItem) {
+      @if (menuItem.routerLink && !menuItem.children) {
+        @if (menuItem.roles) {
+          <button *yhtPermission="menuItem.roles" class="ms-3" mat-flat-button color="primary" [routerLink]="menuItem.routerLink">
+            {{ menuItem.label }}
+          </button>
+        } @else {
+          <button class="ms-3" mat-flat-button color="primary" [routerLink]="menuItem.routerLink">
+            {{ menuItem.label }}
+          </button>
+        }
+      }
+
+      @if (menuItem.children?.length) {
+        @if (menuItem.roles) {
+          <button *yhtPermission="menuItem.roles" class="ms-3" mat-flat-button color="primary" [matMenuTriggerFor]="menu">
+            {{ menuItem.label }}
+          </button>
+        } @else {
+          <button class="ms-3" mat-flat-button color="primary" [matMenuTriggerFor]="menu">
+            {{ menuItem.label }}
+          </button>
+        }
+      }
+
+      <mat-menu #menu="matMenu">
+        @for (child of menuItem.children; track child) {
+          @if (child.routerLink) {
+            @if (child.roles) {
+              <button *yhtPermission="child.roles" mat-menu-item [routerLink]="child.routerLink">
+                {{ child.label }}
+              </button>
+            } @else {
+              <button mat-menu-item [routerLink]="child.routerLink">
+                {{ child.label }}
+              </button>
+            }
+          }
+        }
+      </mat-menu>
+    }
+
+    <div class="flex-fill"></div>
+
+    @for (menuItem of menuConfig; track menuItem) {
+      @if (menuItem.action) {
+        @if (menuItem.roles) {
+          <button *yhtPermission="menuItem.roles" class="ms-3" mat-flat-button color="primary" type="button" (click)="menuItem.action()">
+            {{ menuItem.label }}
+          </button>
+        } @else {
+          <button class="ms-3" mat-flat-button color="primary" type="button" (click)="menuItem.action()">
+            {{ menuItem.label }}
+          </button>
+        }
+      }
+    }
+
+    <yht-user-info *yhtPermission="[userRole.ADMIN, userRole.DOCTOR, userRole.NURSE, userRole.PATIENT]" [user]="user"></yht-user-info>
+  </mat-toolbar-row>
+</mat-toolbar>

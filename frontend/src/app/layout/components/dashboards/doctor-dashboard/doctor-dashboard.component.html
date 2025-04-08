@@ -1,0 +1,56 @@
+@if (form) {
+  <mat-card>
+    <mat-card-content>
+      <form>
+        @if (form.hasError('general')) {
+          <span class="alert alert-danger d-block mb-3">{{ form.getError('general') }}</span>
+        }
+
+        <fieldset class="border">
+          <legend>{{ strings.dashboard.doctor.title.data }}</legend>
+          <ng-container *ngTemplateOutlet="fieldsTpl; context: { fields: userFields, form: userForm, keys: userFieldNames }"></ng-container>
+          <ng-container *ngTemplateOutlet="fieldsTpl; context: { fields: fields, form: form, keys: fieldNames }"></ng-container>
+        </fieldset>
+
+        <fieldset class="border mt-4">
+          <legend>{{ strings.dashboard.doctor.title.specializations }}</legend>
+          <div [formGroup]="form">
+            <yht-form-list
+              [addButtonLabel]="strings.dashboard.doctor.form.fields.specializations.addButtonLabel"
+              [fieldsMap]="formListFields"
+              [form]="form"
+              formArrayName="specializations"
+              [items]="specializations"
+              [readonly]="readonlyMode"
+              [required]="true"
+            ></yht-form-list>
+          </div>
+        </fieldset>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions class="ms-2">
+      @if (readonlyMode) {
+        <button color="accent" mat-flat-button (click)="setReadonlyMode(false)">{{ commonStrings.edit }}</button>
+      } @else {
+        <button class="me-2" mat-button (click)="cancel()">
+          {{ commonStrings.cancel }}
+        </button>
+        <button color="accent" [disabled]="form.pristine || form.invalid || saving" mat-flat-button (click)="submit($event)">
+          {{ commonStrings.save }}
+          <yht-spinner [visible]="saving"></yht-spinner>
+        </button>
+      }
+    </mat-card-actions>
+  </mat-card>
+}
+
+<ng-template #fieldsTpl let-fields="fields" let-form="form" let-keys="keys">
+  <div [formGroup]="form" class="row">
+    @for (key of keys; track key) {
+      <ng-container *ngIf="fields.get(key); let field">
+        <yht-form-field-switcher class="col-4" [control]="getFormGroupControl(form, key)" [field]="field"></yht-form-field-switcher>
+      </ng-container>
+    }
+  </div>
+</ng-template>

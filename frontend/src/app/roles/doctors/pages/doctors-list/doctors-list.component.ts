@@ -9,8 +9,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-import { sprintf } from 'sprintf-js';
-
 import { UserRole } from '@auth/types';
 
 import { SpinnerComponent } from '@core/components/spinner/spinner.component';
@@ -22,8 +20,6 @@ import { StringsLoader } from '@roles/doctors/misc';
 import { DoctorsDataService, DoctorsFacade } from '@roles/doctors/services';
 import { Doctor } from '@roles/doctors/types';
 
-import { ConfirmDialogComponent } from '@shared/shared-confirm/components';
-import { ConfirmDialogData } from '@shared/shared-confirm/types';
 import { TableActionComponent, TableCellLoaderComponent, TableFiltersComponent } from '@shared/shared-table/components';
 import { ExpandableRowAnimation, FiltersToggleExpandAnimation } from '@shared/shared-table/misc';
 import { TableRowExpanderComponentBase } from '@shared/shared-table/misc/table-row-expander.component-base';
@@ -68,12 +64,6 @@ export class DoctorsListComponent extends TableRowExpanderComponentBase<Doctor> 
       icon: 'pencil-outline',
       label: this.strings.actions.edit.label,
       permissions: [UserRole.ADMIN]
-    },
-    {
-      action: (doctor: Doctor) => this.deleteDoctor(doctor),
-      icon: 'delete',
-      label: this.strings.actions.delete.label,
-      permissions: [UserRole.ADMIN]
     }
   ];
 
@@ -106,26 +96,6 @@ export class DoctorsListComponent extends TableRowExpanderComponentBase<Doctor> 
         this.handleError('[BŁĄD] Pobieranie lekarzy', error);
       }
     });
-  }
-
-  private deleteDoctor(doctor: Doctor): void {
-    this.dialog
-      .open(ConfirmDialogComponent, {
-        data: {
-          cancelLabel: this.commonStrings.no,
-          confirmLabel: this.commonStrings.yes,
-          content: sprintf(this.strings.actions.delete.confirm.content, doctor.readable_id),
-          onConfirm: () => this.doctorsFacade.deleteDoctor(doctor.id),
-          successMessage: sprintf(this.strings.actions.delete.confirm.succeed, doctor.readable_id),
-          title: this.strings.actions.delete.confirm.title
-        } as ConfirmDialogData
-      })
-      .afterClosed()
-      .subscribe(doctorDeleted => {
-        if (doctorDeleted) {
-          this.getData(true);
-        }
-      });
   }
 
   openEditFormDialog(doctor: Doctor): void {

@@ -2,14 +2,6 @@ import { doctorStrings } from '@roles/doctors/misc/doctor-strings';
 
 export const strings = Object.freeze({
   actions: {
-    delete: {
-      confirm: {
-        content: 'Czy na pewno chcesz usunąć lekarza od ID: %s?',
-        succeed: 'Lekarz o ID %s został usunięty',
-        title: 'Potwierdzenie usunięcia lekarza'
-      },
-      label: 'Usuń lekarza'
-    },
     edit: {
       label: 'Edytuj lekarza',
       succeed: 'Zapisano dane lekarza',

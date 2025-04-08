@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { map, MonoTypeOperatorFunction, Observable, pipe } from 'rxjs';
+import { MonoTypeOperatorFunction, Observable, map, pipe } from 'rxjs';
 
 import { ListParams, ListResponse } from '@core/types';
 
@@ -22,10 +22,6 @@ export class DoctorsFacade {
 
   updateDoctor(id: string, data: DoctorPatchData): Observable<Doctor> {
     return this.doctorsDataService.patch(id, data).pipe(this.convertDoctor());
-  }
-
-  deleteDoctor(id: string): Observable<unknown> {
-    return this.doctorsDataService.delete(id);
   }
 
   private convertDoctor(): MonoTypeOperatorFunction<Doctor> {

@@ -124,6 +124,7 @@ export class AuthFacade {
         this.getDefaultTokenLifetime().pipe(
           tap(defaultTokenLifetime => this.sessionTimerService.setDefaultTokenLifetime(defaultTokenLifetime)),
           tap(() => this.setupSessionTimer()),
+          tap(() => this.router.navigate(['/'])),
           map(() => response)
         )
       ),

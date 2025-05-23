@@ -272,6 +272,7 @@ LOGGING = {
         },
     },
 }
+
 SPECTACULAR_SETTINGS = {
     "TITLE": "backend",
     "DESCRIPTION": "API for YourHealthTime",
